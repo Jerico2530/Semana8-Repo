@@ -1,0 +1,25 @@
+@server =https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
+
+@apiserver = {{server}}/api/curso
+###
+
+GET {{server}}
+###
+GET {{server}}/codigo
+###
+GET {{server}}/nombre-completo
+
+###
+GET {{apiserver}}/listar
+
+###
+POST {{apiserver}}/nuevo
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Inteligencia+Artificial&creditos=4
+###
+
+DELETE {{apiserver}}/eliminar
+Content-Type: application/x-www-form-urlencoded
+
+id=54
