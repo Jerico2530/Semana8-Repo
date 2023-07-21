@@ -1,5 +1,5 @@
-@server =https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
-
+#@server =https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
+@server= https://semana8-repo.onrender.com
 @apiserver = {{server}}/api/curso
 ###
 
@@ -16,10 +16,10 @@ GET {{apiserver}}/listar
 POST {{apiserver}}/nuevo
 Content-Type: application/x-www-form-urlencoded
 
-nombre=Inteligencia+Artificial&creditos=4
+nombre=BD&creditos=4
 ###
 
 DELETE {{apiserver}}/eliminar
 Content-Type: application/x-www-form-urlencoded
 
-id=54
+id=52
