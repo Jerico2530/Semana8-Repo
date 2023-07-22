@@ -1,4 +1,6 @@
-@server = https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
+#@server = https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
+@server = https://semana8-repo.onrender.com/
+@server = https://sem8.onrender.com
 @apiserver = {{server}}/api/curso
 ###
 GET {{server}}

@@ -21,7 +21,7 @@ GET {{server}}/cursos?size=2&page=1&sort=creditos,desc
 POST {{server}}/cursos
 Content-Type: application/json
 
-{"nombre": "Compiladores", "creditos": 5}
+{"nombre": "Algoritmo", "creditos": 3}
 
 ### 
 PATCH {{server}}/cursos/152
@@ -31,10 +31,10 @@ Content-Type: application/json
 
 ###
 
-DELETE {{server}}/cursos/203
+DELETE {{server}}/cursos/325
 
 ###
-GET {{server}}/cursos/search/findByNombre?nombre=Algoritmos
+GET {{server}}/cursos/search/findByNombre?nombre=Mysql
 ###
 GET {{server}}/cursos
 ###
@@ -54,7 +54,7 @@ GET {{server}}/carreras/2/cursos
 POST {{server}}/carreras
 Content-Type: application/json
 
-{"nombre": "Marketing"}
+{"nombre": "Ing.Softwuare"}
 
 ### 
 PATCH {{server}}/cursos/2
