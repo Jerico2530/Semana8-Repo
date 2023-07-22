@@ -9,7 +9,7 @@ GET {{server}}/cursos
 GET {{server}}/cursos?size=2
 
 ###
-GET {{server}}/cursos?size=2&page=1
+GET {{server}}/cursos?size=2&page=2
 
 ###
 GET {{server}}/cursos?sort=creditos,desc

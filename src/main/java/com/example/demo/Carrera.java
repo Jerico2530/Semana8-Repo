@@ -5,26 +5,27 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
+
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "curso")
-public class Curso {
+@Table(name = "carrera")
+public class Carrera {
 
     @Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     private String nombre;
+
+    @OneToMany(targetEntity=Curso.class, mappedBy="carrera")
+    @OrderBy("nombre ASC")
+    private Set<Curso> cursos = new HashSet<Curso>();
     
-    private Integer creditos;
-
-    @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "id_carrera")
-    private Carrera carrera;
-
     public Integer getId() {
         return id;
     }
@@ -41,22 +42,17 @@ public class Curso {
         this.nombre = nombre;
     }
 
-    public Integer getCreditos() {
-        return creditos;
+    public Set<Curso> getCursos() {
+        return cursos;
     }
 
-    public void setCreditos(Integer creditos) {
-        this.creditos = creditos;
+    public void setCursos(Set<Curso> cursos) {
+        this.cursos = cursos;
     }
 
-    public Carrera getCarrera() {
-        return carrera;
+    @Override
+    public String toString() {
+        return "Carrera [id=" + id + ", nombre=" + nombre + "]";
     }
-
-    public void setCarrera(Carrera carrera) {
-        this.carrera = carrera;
-    }
-
-    
     
 }

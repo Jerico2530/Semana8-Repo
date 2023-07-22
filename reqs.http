@@ -1,8 +1,6 @@
-#@server =https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
-@server= https://semana8-repo.onrender.com
+@server = https://jerico2530-effective-fortnight-r95wjpvv5wvfx7j9-8080.preview.app.github.dev
 @apiserver = {{server}}/api/curso
 ###
-
 GET {{server}}
 ###
 GET {{server}}/codigo
@@ -16,10 +14,10 @@ GET {{apiserver}}/listar
 POST {{apiserver}}/nuevo
 Content-Type: application/x-www-form-urlencoded
 
-nombre=BD&creditos=4
-###
+nombre=Mysql&creditos=5
 
+###
 DELETE {{apiserver}}/eliminar
 Content-Type: application/x-www-form-urlencoded
 
-id=52
+id=202
